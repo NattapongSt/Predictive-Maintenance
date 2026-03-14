@@ -27,18 +27,6 @@
 
 ---
 
-## โครงสร้างไฟล์
-
-```
-project/
-├── ml_dataset.csv                      # ข้อมูลการสั่นสะเทือนดิบ
-├── predictive_maintenance_pipeline.py  # โค้ด pipeline ทั้งหมด
-├── predictive_maintenance_report.png   # กราฟผลลัพธ์
-└── README.md
-```
-
----
-
 ## ข้อมูลดิบ (ml_dataset.csv)
 
 เซ็นเซอร์บันทึกค่าการสั่นสะเทือนทุกๆ ~133 ms ต่อการวัด 1 ครั้ง
@@ -303,23 +291,6 @@ pip install pandas numpy scipy scikit-learn matplotlib
 | `scipy.fft` | FFT processing |
 | `sklearn` | StandardScaler, MLPClassifier, metrics |
 | `matplotlib` | สร้างกราฟรายงาน |
-
----
-
-## วิธีรัน
-
-```bash
-# 1. วางไฟล์ข้อมูลไว้ในโฟลเดอร์เดียวกัน
-# 2. แก้ path ในบรรทัดแรกของโค้ด
-df = pd.read_csv('ml_dataset.csv')
-
-# 3. รัน
-python predictive_maintenance_pipeline.py
-
-# Output:
-# - predictive_maintenance_report.png  (กราฟผล)
-# - ผลการ classify ในเทอร์มินอล
-```
 
 ---
 
